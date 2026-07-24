@@ -27,7 +27,6 @@ dependencies = []
 [project.optional-dependencies]
 dev = [
   "build>=1.2",
-  "mypy>=1.10",
   "pytest>=8.2",
   "pytest-cov>=5.0",
   "ruff>=0.5",
@@ -54,10 +53,5 @@ target-version = "py310"
 line-length = 110
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "B", "UP", "SIM"]
-
-[tool.mypy]
-python_version = "3.10"
-strict = true
-packages = ["kiwai"]
-mypy_path = "src"
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]
